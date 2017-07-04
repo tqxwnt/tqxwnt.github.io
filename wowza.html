@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* Markdown.css */
+/* Authors: Kevin Burke: http://kev.inburke.com/, modified by Evan Wondrasek  */
+/* https://bitbucket.org/kevinburke/markdowncss */
+
+body{
+    margin: 0 auto;
+    font-family: Georgia, Palatino, serif;
+    color: #444444;
+    line-height: 1;
+    max-width: 960px;
+    padding: 5px;
+}
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 16px;
+    padding: 0;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 22px;
+    margin: 20px 0 6px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    color: purple;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+    margin-left: 44px;
+}
+li ul, li ul {
+    margin-left: 24px;
+}
+p, ul, ol {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 540px;
+}
+pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {  
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 540px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+  display: inline-block;
+  width: 210px;
+  padding: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+select, input[type=file] {
+  height: 27px;
+  line-height: 27px;
+}
+textarea {
+  height: auto;
+}
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #004b9a;
+  border-bottom-color: #003f81;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  color: #fff;
+  background-position: 0 -15px;
+  text-decoration: none;
+}
+button:active {
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+</style>
+</head>
+<body>
+<h1>Wowza配置教程</h1>
+<h3>1. 下载 Wowza</h3>
+<p>官方下载地址 <a href="http://www.wowza.com/pricing/installer" title="wowza官网">wowza官网</a>，选择适合你自己的平台的版本进行下载。</p>
+<h3>2. 获取许可密钥</h3>
+<p>如果手里没有 license，可以到 Wowza 官网注册一个账户，Wowza 会发送给你一个 30 天的试用许可密钥。</p>
+<blockquote>
+<p>请求码：ET1A4-4nbHv-UFXJU-wNhXF-f6VPK-TA4UJ-9na6eYNNpbRF</p>
+</blockquote>
+<h3>3. 安装 Wowza</h3>
+<p>以 Windows 为例，直接运行步骤1下载的 WowzaStreamingEngine-4.7.0-windows-installer.exe。安装过程中 Wowza 会要求你输入密钥，输入步骤2得到的密钥即可安装成功。</p>
+<blockquote>
+<p>注意：确保服务器端口 1935 没有被其他程序占用（在cmd命令行中输入netstat -a查看端口号占有的情况，如图3.1所示），而且没有被防火墙屏蔽。
+<img src="http://i.imgur.com/I91xXyD.png" />
+图3.1 查看端口号占用情况</p>
+</blockquote>
+<h3>4. 配置 Wowza</h3>
+<blockquote>
+<p>4.1安装完成后</p>
+</blockquote>
+<p><code>将安装包中的Crack中的jar包按readme.txt中的路径替换原来的jar包，不然会出现一直需要登录如图4.1所示。</code> 
+<img src="http://i.imgur.com/HZep8qz.png" alt="根据readme.txt替换jar包" />
+图4.1 根据readme.txt替换jar包</p>
+<blockquote>
+<p>4.2 配置完成后</p>
+</blockquote>
+<p><code>在服务项中启动wowza Streaming Emgine Manager 4.3.0 和wowza Streaming Emgine 4.3.0服务（如图4.2所示）。</code>
+<img src="http://i.imgur.com/jpdLjgT.png" alt="服务项中启动服务" />
+图4.2 服务项中启动服务</p>
+<blockquote>
+<p>4.3启动服务之后</p>
+</blockquote>
+<p><code>点击wowza streaming engine manager进入浏览器，就会访问http://localhost:8088，进入如图4.3的界面</code> 
+<img src="http://i.imgur.com/XhfiL9K.png" alt="web端登录界面" />
+图4.3 web端登录界面</p>
+<blockquote>
+<p>进行注册之后进入管理界面
+<img src="http://i.imgur.com/jXxiqmm.png" />
+图4.4 管理界面
+登录成功之后
+点击Applications界面，进入设置直播（live）或点播（vod）界面。设置为视频转发服务器就要选择live，如图4.5所示。
+<img src="http://i.imgur.com/uGM5Hxi.png" alt="进入applications界面配置直播（live）或者点播（vod）" /> 
+图4.5 进入applications界面配置直播（live）或者点播（vod）
+摄像头是配置为直播模式，点击live之后，添加直播应用名如图4.6所示， 然后添加取流文件名、URL如图4.7所示。
+<img src="http://i.imgur.com/5mtuODi.png" alt="输入配置直播程序的名字" /> 
+图4.6 输入配置直播程序的名字
+<img src="http://i.imgur.com/fvtUt1D.png" alt=" 输入转发发文件名和url" />
+图4.7 输入转发发文件名和url</p>
+<p>填写url时格式为rtsp://admin:xwnt2015@202.98.212.116:5548/ch1/sub/av<em>stream，（海康威视的摄像头取流url格式，主码流：rtsp://ip:port/ch1/main/av</em>stream, 子码流：rtsp://ip:port/ch1/sub/av_stream）
+设置完成后，添加选项playback Security，修改client restrictions为No client restrictions，然后点击save。如图4.8所示。
+<img src="http://i.imgur.com/hlcjeHO.png" alt="修改playback Security选项" /> 
+图4.8 修改playback Security选项</p>
+<p>修改source security 选项，具体操作如图4.9所示，
+<img src="http://i.imgur.com/TiPG1C4.png" alt="修改source security选项" />
+图4.9 修改source security选项</p>
+<p>配置完application 后， 进行server端的配置， 在server端需要进行source authentication、stream files 的配置，source authentication配置如图4.10、图4.11所示。
+<img src="http://i.imgur.com/V5AxKSS.png" alt="source authentication的配置" /></p>
+</blockquote>
+<p>图4.10 source authentication的配置
+ <img src="http://i.imgur.com/0eSvXzQ.png" alt="添加live流来源的配置" />
+图4.11 添加live流来源的配置</p>
+<blockquote>
+<p>然后添加stream files配置项如图4.12、图4.13、 图4.14、图4.15所示。
+<img src="http://i.imgur.com/VZTWJz0.png" alt="添加stream files项" />
+图4.12 添加stream files项
+<img src="http://i.imgur.com/Ly5HUi7.png" />
+图4.13 添加stream files 规则</p>
+</blockquote>
+<p><img src="http://i.imgur.com/iwCJtL3.png" alt="将添加的stream files与application 关联" />
+图4.14 将添加的stream files与application 关联
+ <img src="http://i.imgur.com/XYhslKQ.png" alt="关联stream file" />
+图4.15 关联stream file</p>
+<blockquote>
+<p>最后一步</p>
+<p>打开vlc软件测试，媒体——&gt;&gt;打开网络串流——&gt;&gt;网络——&gt;&gt;输入网路url——&gt;&gt;播放。
+<img src="http://i.imgur.com/xNBRu0e.png" alt="使用网络url测试取流是否正常" />
+图4.15 使用网络url测试取流是否正常</p>
+<p>如果出现如图4.16所示的图像，则表示wowza搭建成功。
+<img src="http://i.imgur.com/o7PIayT.png" alt="取流成功" />
+图4.16 取流成功</p>
+<p>整个流程做完， 你就完成了视频转发的所有了。</p>
+</blockquote>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
